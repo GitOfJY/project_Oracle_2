@@ -6,6 +6,9 @@ insert into tblAdmin (adminSeq, id, password) values (3, 'admin3', '1234' );
 insert into tblAdmin (adminSeq, id, password) values (4, 'admin4', '1234' );
 insert into tblAdmin (adminSeq, id, password) values (5, 'admin5', '1234' );
 
+
+
+
 -- 강의실
 select count(*) from tblClassroom; -- 6
 insert into tblClassroom (classroomSeq, classroomName, totalNum) values (1, '1 강의실', 30);
@@ -14,6 +17,8 @@ insert into tblClassroom (classroomSeq, classroomName, totalNum) values (3, '3 �
 insert into tblClassroom (classroomSeq, classroomName, totalNum) values (4, '4 강의실', 26);
 insert into tblClassroom (classroomSeq, classroomName, totalNum) values (5, '5 강의실', 26);
 insert into tblClassroom (classroomSeq, classroomName, totalNum) values (6, '6 강의실', 26);
+
+
 
 
 -- 과정
@@ -193,6 +198,7 @@ insert into tblBook (bookSeq, name, subjectSeq, publisherSeq) values (93, '인�
 
 
 
+
 --과목
 select count(*) from tblSubject; -- 39
 insert into tblSubject (subjectSeq, name) values (1, 'JAVA');
@@ -234,6 +240,8 @@ insert into tblSubject (subjectSeq, name) values (36, '핀테크');
 insert into tblSubject (subjectSeq, name) values (37, '클라우드');
 insert into tblSubject (subjectSeq, name) values (38, '블록체인');
 insert into tblSubject (subjectSeq, name) values (39, 'VR/AR');
+
+
 
 
 --과정+과목
@@ -358,8 +366,7 @@ insert into tblHaveTeam (haveTeamSeq, studentSeq, teamSeq) values (20, 20, 6);
 
 
 
-
---선생님
+--교사
 select count(*) from tblTeacher; --10
 insert into tblTeacher (teacherSeq, name, ssn, tel, state) values (1, '김철수', '1223345', '010-1234-1234', null);
 insert into tblTeacher (teacherSeq, name, ssn, tel, state) values (2, '김슬기', '2222225', '010-2222-3333', null);
@@ -437,6 +444,7 @@ insert into tblStudent (studentSeq, name, ssn, tel, regdate) values (57, '전병
 insert into tblStudent (studentSeq, name, ssn, tel, regdate) values (58, '심광조', '2564528', '010-9818-1718', '22/03/04');
 insert into tblStudent (studentSeq, name, ssn, tel, regdate) values (59, '권이수', '1468629', '010-6581-1751', '22/03/04');
 insert into tblStudent (studentSeq, name, ssn, tel, regdate) values (60, '이희철', '2876930', '010-4671-1345', '22/03/04');
+
 
 
 
@@ -589,6 +597,7 @@ insert into tblRecomment (recommentSeq, recomment, reviewSeq) values (30, '저�
 
 
 
+
 -- 커뮤니티
 select count(*) from tblCommunity; -- 30
 insert into tblCommunity (CommunitySeq, reviewSeq) values (1, 1);
@@ -637,6 +646,7 @@ insert into tblDropOut (dropOutSeq, outDate, studentSeq) values (7, '22/05/03', 
 insert into tblDropOut (dropOutSeq, outDate, studentSeq) values (8, '22/05/06', 48);
 insert into tblDropOut (dropOutSeq, outDate, studentSeq) values (9, '22/04/28', 52);
 insert into tblDropOut (dropOutSeq, outDate, studentSeq) values (10, '22/05/12', 56);
+
 
 
 
@@ -726,6 +736,7 @@ insert into tblSugang (sugangSeq, studentSeq, openCourseSeq) values (57, 57, 6);
 insert into tblSugang (sugangSeq, studentSeq, openCourseSeq) values (58, 58, 6);
 insert into tblSugang (sugangSeq, studentSeq, openCourseSeq) values (59, 59, 6);
 insert into tblSugang (sugangSeq, studentSeq, openCourseSeq) values (60, 60, 6);
+
 
 
 
@@ -993,7 +1004,6 @@ insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, exa
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (8, 37, 33, 30, 8);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (9, 39, 31, 30, 9);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (10, 30, 40, 30, 10);
-
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (11, 31, 39, 30, 11);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (12, 35, 35, 30, 12);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (13, 40, 30, 30, 13);
@@ -1004,11 +1014,11 @@ insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, exa
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (18, 40, 30, 30, 18);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (19, 30, 40, 30, 19);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (20, 30, 40, 30, 20);
-
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (21, 20, 50, 30, 21);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (22, 40, 30, 30, 22);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (23, 33, 37, 30, 23);
 insert into tblPoints (pointsSeq, pointsNote, pointsPractical, pointsAttend, examSeq) values (24, 40, 30, 30, 24);
+
 
 
 
@@ -1038,7 +1048,6 @@ insert into tblExam (examSeq, examName, openSubjectSeq) values (21, 'JAVA시험'
 insert into tblExam (examSeq, examName, openSubjectSeq) values (22, 'HTML시험', 22);
 insert into tblExam (examSeq, examName, openSubjectSeq) values (23, 'CSS시험', 23);
 insert into tblExam (examSeq, examName, openSubjectSeq) values (24, 'JDBC시험', 24);
-
 
 
 
